@@ -1,0 +1,2267 @@
+@font-face {
+  font-family: 'pettingill_cfbold';
+  src: url('../fonts/pettingillcf-bold-webfont.eot');
+  src: url('../fonts/pettingillcf-bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/pettingillcf-bold-webfont.woff2') format('woff2'),
+       url('../fonts/pettingillcf-bold-webfont.woff') format('woff'),
+       url('../fonts/pettingillcf-bold-webfont.svg#pettingill_cfbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'abhaya_librebold';
+  src: url('../fonts/abhayalibre-bold-webfont.eot');
+  src: url('../fonts/abhayalibre-bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/abhayalibre-bold-webfont.woff2') format('woff2'),
+       url('../fonts/abhayalibre-bold-webfont.woff') format('woff'),
+       url('../fonts/abhayalibre-bold-webfont.svg#abhaya_librebold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'alex_brushregular';
+  src: url('../fonts/alexbrush-regular-webfont.eot');
+  src: url('../fonts/alexbrush-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/alexbrush-regular-webfont.woff2') format('woff2'),
+       url('../fonts/alexbrush-regular-webfont.woff') format('woff'),
+       url('../fonts/alexbrush-regular-webfont.svg#alex_brushregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+  
+  :root {
+    --fondo1: #8946a6;
+    --fondo2: #b762c1;
+    --fondo3: #ea99d5;
+    --fondo4: #ffcddd;
+    --border: rgb(186, 85, 211);
+    --boton: rgb(221, 160, 221);
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+  body {
+    font-size: 16px; /* -----------Estas dos etiquetas body y HTML se utilizan para sacarle
+      mejor provecho al rem en los font-size----*/
+      overflow:visible !important;
+  }
+  /* --*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }__*/
+  
+  h1{
+    font-size: 2.5rem;
+    font-weight: normal;
+    color: #ffcddd;
+    text-align: center;
+    margin: 2rem 0;
+  }
+  h1, h2{
+    font-family: 'pettingill_cfbold' !important;
+  }
+
+/*-------------------------------------General------------------------*/
+
+
+
+  /*-------------------------Alertas-------------------*/
+  
+  /*-----------------------------checkbox---------------------------------------*/
+.hide{
+  display: none;
+}
+.formulario_body{
+width: 100%;
+height: 100%;
+background-color: rgba(207, 179, 179, 0.514);
+z-index: 100;
+position:fixed;
+z-index: 10000;
+}
+.formulario {
+  width: 50%;
+  max-width: 100%;
+  margin: auto;
+  margin-top: 10rem;
+  padding: 2rem;
+  box-shadow: 2px 2px 20px 1px rgba(241, 188, 188, 0.808) inset, -2px -2px 20px 1px rgba(207, 179, 179, 0.514), 2px 2px 20px 1px rgba(241, 188, 188, 0.808) inset, -2px -2px 20px 1px rgba(207, 179, 179, 0.514);
+  background: rgba(233, 47, 224, 0.87);
+  border: 3px solid Purple;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.imgLogo {
+  display: block;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  /*border: 1px solid rgba(109, 86, 10, 0.7);*/
+}
+
+.formulario__titulo,
+.formulario__subtitulo,
+.formulario__parrafo {
+  text-align: center;
+  margin-top: 0;
+}
+.formulario__titulo,
+.formulario__subtitulo {
+  color: rgba(238, 226, 226, 0.7);
+  text-shadow: 3px 3px 10px rgb(119, 105, 126), -3px -3px 10px rgb(202, 108, 245);
+}
+.formulario__parrafo {
+  font-weight: bold;
+  color: white;
+}
+.formulario__input,
+.formulario__label {
+  display: block;
+  width: 100%;
+  font-size: 1, 3em;
+}
+.formulario__input {
+  padding: 1.3rem;
+  background: rgb(233, 175, 225);
+  /* puedo colocar otro color pero con transparencia asi: background: rgba(0,0,0,0.1) porque sino no se ven las label, aunque ya no es necesario porque ya no estan sobre los input y ademas le quite el z-index*/
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+.formulario__input:focus {
+  /*outline: 1px solid rgba(0,0,0,0.7);*/
+  outline: none;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.7);
+}
+/*.formulario__input:focus + .formulario__label{
+    margin-top: -120px;
+}*/
+.formulario__label {
+  padding-left: 1rem;
+  /*position: absolute;*/
+  /*margin-top: -78px;*/
+  /*z-index: -20;*/
+  color: white;
+  /*transition: all 0.2s;*/
+  margin: 2px;
+}
+.formulario__submit {
+  background: rgba(209, 162, 209, 0.7);
+  box-shadow: 3px 3px 10px rgb(233, 197, 250), -3px -3px 10px rgb(202, 108, 245);
+  color: white;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  display: block;
+  width: 50%;
+  font-size: 1, 3em;
+}
+
+/*Centrar los campos del formulario (Los input y el boton de Enviar al WhatsApp, que tambien es un input)*/
+
+.formulario__input,
+.formulario__submit {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*.fijar {
+    margin-top: -120px;
+} */
+
+/* respuesta del formulario */
+#respuesta {
+  width: 100%;
+  height: 5rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+#respuesta.fail {
+  color: red;
+}
+#respuesta.send {
+  color: green;
+}
+.form_cierre{
+  color: rgb(240, 165, 243);
+  font-size: 3rem;
+  cursor: pointer;
+  position: relative;
+  top: -1.5rem;
+  left: 100%;
+transition: all 0.5s;
+}
+.form_cierre:hover{
+  color: #8946a6;
+}
+
+/*-----------------------------------MAIN-----------------------------*/
+.main{
+  display: grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:1rem;
+  padding: 2rem;
+}
+
+.cajass{
+  border: 1px solid white;
+  text-align: center;
+  font-family: 'abhaya_librebold';
+}
+.cajass:hover{
+  box-shadow: 0 0 10px #ae00ff, 0 0 25px #001eff, 0 0 50px #ae00ff;
+}
+
+.caja0{
+  grid-column: 1 / 5;
+  border: none;
+  font-size: 3rem;
+  text-shadow: 0 0 10px #c3f023, 0 0 25px #94eb23, 0 0 50px #9ee93c;;
+}
+/*------Inicio de barra lateral-----*/
+.caja01{
+  grid-area: 2/4/10/5;
+  align-content: center;
+}
+.barra_lateral{
+  position:fixed;
+  margin-left: 4rem;
+  margin-top: -7rem;
+  padding: 2rem;
+}
+/*------Fin de barra lateral-----*/
+
+/*------------caja1----------------------*/
+.caja1{
+  grid-column: 1/2;
+  grid-row: 2/6;
+  width: auto;
+  height: auto;
+  margin: 1rem;
+  flex-direction: column;
+  background: white;
+  font-size: 1.2rem;
+  border-radius: 15px;
+  position: relative;
+  transition: all .4s;
+  overflow: hidden;
+  cursor: pointer;
+}
+.caja1:hover{
+  color: white;
+}
+.caja1::before{
+  content: '';
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    width: 1rem;
+    height: 89%;
+    border-radius: 50px;
+    transition: all .4s;
+    background: linear-gradient(147deg,#99e7c9 0%,#0f99cf 74%);
+}
+
+
+.caja1:hover::before{
+  top: 0;
+  left: 0;
+  border-radius: 0px;
+  width: 100%;
+  height: 100%;
+}
+.caja1 .caja_titulo, .caja1 .caja_texto{
+  margin: 0.5rem 5rem;
+  font-size: 2rem;
+  z-index: 1000;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*------------------CAJA2--------------------------------------------*/
+.caja2{
+  grid-column: 2/5;
+  grid-row: 2/5;
+  width: auto;
+  height: auto;
+  margin: 1rem;
+  flex-direction: column;
+  background: white;
+  font-size: 1.2rem;
+  border-radius: 15px;
+  position: relative;
+  transition: all .4s;
+  overflow: hidden;
+}
+.caja2:hover{
+  color: white;
+}
+.caja2::before{
+  content: '';
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    width: 1rem;
+    height: 83%;
+    border-radius: 50px;
+    transition: all .4s;
+    background: linear-gradient(147deg,#ac56f3 0%,#0f69cf 74%);
+}
+
+
+.caja2:hover::before{
+  top: 0;
+  left: 0;
+  border-radius: 0px;
+  width: 100%;
+  height: 100%;
+}
+.caja2 .caja_titulo, .caja2 .caja_texto{
+  margin: 0.5rem 5rem;
+  font-size: 2rem;
+  z-index: 1000;
+}
+
+/*----------------------------------------------*/
+.caja21{
+  grid-column: 2/3;
+  grid-row: 5/6;
+  background: #4262f0;
+  background-image: url(../img/Profilaxis.jfif);
+  background-size: cover;
+  border-radius: 10px;
+  color: white;
+  height: 15rem;
+  text-shadow: 1px 1px 2px rgb(243, 165, 165), 0 0 1em rgb(37, 37, 41), 0 0 0.2em rgb(37, 37, 41);
+  transition: all 1.5s;
+  cursor: pointer;
+}
+
+.caja21 .caja_titulo h3{
+ position: relative;
+ top:2rem;
+ font-size: 3rem;
+}
+.caja21:hover .caja_titulo h3{
+  position: relative;
+  top:1rem;
+
+}
+.caja21:hover{
+  transform: scale3d(1.5, 1.5, 1);
+  z-index: 1000;
+  background: linear-gradient(0.45turn, #d887f1cb, #b167bbcb, #f63cb8cb);
+  text-shadow: 1px 1px 2px rgb(243, 165, 165), 0 0 1em rgb(37, 37, 41), 0 0 0.2em rgb(37, 37, 41);
+  border-radius: 30px;
+  color: white;
+}
+
+.caja21 .caja_texto p{
+  display: none;
+}
+.caja21:hover .caja_texto p{
+  display: block;
+text-align: center;
+font-size: 1.5rem;
+margin-top: -1rem;
+margin-left: 18%;
+width: 24rem;
+height: 6rem;
+}
+/*----------------------------------------------*/
+.caja22{
+  grid-column: 3/4;
+  grid-row: 5/7;
+  background: #4262f0;
+  background-image: url(../img/aplicacio_flour.jfif);
+  background-size: cover;
+  border-radius: 1rem;
+  color: white;
+  height: 100%;
+  text-shadow: 1px 1px 2px rgb(243, 165, 165), 0 0 1em rgb(37, 37, 41), 0 0 0.2em rgb(37, 37, 41);
+  transition: all 1.5s;
+  cursor: pointer;
+}
+.caja22 .caja_titulo h3{
+  position: relative;
+  top:5rem;
+  font-size: 3rem;
+ }
+ .caja22:hover .caja_titulo h3{
+   position: relative;
+   top:4rem;
+ 
+ }
+ .caja22:hover{
+  transform: scale3d(1.3, 1.3, 1);
+  z-index: 1000;
+  background: linear-gradient(0.45turn, #d887f1cb, #b167bbcb, #f63cb8cb);
+  text-shadow: 1px 1px 2px rgb(243, 165, 165), 0 0 1em rgb(37, 37, 41), 0 0 0.2em rgb(37, 37, 41);
+  border-radius: 3rem;
+  color: white;
+}
+
+.caja22 .caja_texto p{
+  display: none;
+}
+.caja22:hover .caja_texto p{
+  display: block;
+text-align: center;
+font-size: 1.5rem;
+margin-top: 6rem;
+margin-left: 18%;
+width: 26rem;
+height: 4rem;
+}
+/*----------------------------------------------------------------------*/
+.caja23{
+  grid-column: 4/5;
+  grid-row: 5/7;
+  background: #4262f0;
+  background-image: url(../img/sellado-de-fisura.jpg);
+  background-size: cover;
+  border-radius: 1rem;
+  color: white;
+  height: 100%;
+  text-shadow: 1px 1px 2px rgb(243, 165, 165), 0 0 1em rgb(37, 37, 41), 0 0 0.2em rgb(37, 37, 41);
+  transition: all 1.5s;
+  cursor: pointer;
+}
+.caja23 .caja_titulo h3{
+  position: relative;
+  top:6rem;
+  font-size: 3rem;
+ }
+ .caja23:hover .caja_titulo h3{
+   position: relative;
+   top:4rem;
+ 
+ }
+ .caja23:hover{
+  transform: scale3d(1.3, 1.3, 1);
+  z-index: 1002;
+  background: linear-gradient(0.45turn, #d887f1cb, #b167bbcb, #f63cb8cb);
+  text-shadow: 1px 1px 2px rgb(243, 165, 165), 0 0 1em rgb(37, 37, 41), 0 0 0.2em rgb(37, 37, 41);
+  border-radius: 30px;
+  margin-right:4rem;
+  color: white;
+}
+
+.caja23 .caja_texto p{
+  display: none;
+}
+.caja23:hover .caja_texto p{
+  display: block;
+text-align: center;
+font-size: 1.5rem;
+margin-top: 6rem;
+margin-left: 15%;
+width: 26rem;
+height: 4rem;
+}
+  
+
+/*-------------------------------------------------------------------------*/  
+
+.caja24{
+  grid-column: 1/3;
+  grid-row: 6/7;
+  background: #4262f0;
+  background-image: url(../img/sellado-de-fisura.jpg);
+  background-size: cover;
+  border-radius: 1rem;
+  color: white;
+  height: 100%;
+  text-shadow: 1px 1px 2px rgb(243, 165, 165), 0 0 1em rgb(37, 37, 41), 0 0 0.2em rgb(37, 37, 41);
+  transition: all 1.5s;
+  cursor: pointer;
+}
+.caja24 .caja_titulo h3{
+  position: relative;
+  top:0.5rem;
+  font-size: 2rem;
+ }
+ .caja24:hover .caja_titulo h3{
+   position: relative;
+   top:-1rem;
+ 
+ }
+ .caja24:hover{
+  transform: scale3d(1.1, 1.4, 1);
+  z-index: 1100;
+  background: linear-gradient(0.45turn, #d887f1cb, #b167bbcb, #f63cb8cb);
+  text-shadow: 1px 1px 2px rgb(243, 165, 165), 0 0 1em rgb(37, 37, 41), 0 0 0.2em rgb(37, 37, 41);
+  border-radius: 30px;
+  padding-bottom: 3rem;
+  margin-left:3rem;
+  margin-top: -4rem;
+  color: white;
+}
+
+.caja24 .caja_texto p{
+  display: none;
+}
+.caja24:hover .caja_texto p{
+  display: block;
+text-align: center;
+font-size: 1.5rem;
+margin-top: -2rem;
+margin-left: 2%;
+width: 70rem;
+height: 3rem;
+}
+/*----------------------------------------CAJA 3----------------------------*/
+.caja3{
+  grid-column: 2/5;
+  grid-row: 7/8;
+  height: auto;
+  margin: 1rem;
+  flex-direction: column;
+  background: white;
+  font-size: 1.2rem;
+  border-radius: 15px;
+  position: relative;
+  transition: all .4s;
+  overflow: hidden;
+}
+.caja3:hover{
+  color: white;
+}
+.caja3::before{
+  content: '';
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    width: 1rem;
+    height: 83%;
+    border-radius: 50px;
+    transition: all .4s;
+    background: linear-gradient(147deg,#e978ec 0%,#940599 74%);
+}
+
+.caja3:hover::before{
+  top: 0;
+  left: 0;
+  border-radius: 0px;
+  width: 100%;
+  height: 100%;
+}
+.caja3 .caja_titulo, .caja3 .caja_texto{
+  margin: 0.5rem 5rem;
+  font-size: 2rem;
+  z-index: 1000;
+}
+
+/*-------------------------------------------------------*/
+.caja31{
+  grid-column: 1/2;
+  grid-row: 7/9;
+  background-image: url(../img/incrustaciones.jpg);
+  background-size: cover;
+  border-radius: 1rem;
+  color: white;
+  height: 100%;
+  text-shadow: 1px 1px 2px rgb(243, 165, 165), 0 0 1em rgb(37, 37, 41), 0 0 0.2em rgb(37, 37, 41);
+  transition: all 1.5s;
+  cursor: pointer;
+}
+.caja31 .caja_titulo h3{
+  position: relative;
+  top:100px;
+  font-size: 3rem;
+ }
+ .caja31:hover .caja_titulo h3{
+   position: relative;
+   top:5rem;
+ 
+ }
+ .caja31:hover{
+  transform: scale3d(1.3, 1.2, 1);
+  z-index: 1002;
+  background: linear-gradient(0.45turn, #d887f1cb, #b167bbcb, #f63cb8cb);
+  text-shadow: 1px 1px 2px rgb(243, 165, 165), 0 0 1em rgb(37, 37, 41), 0 0 0.2em rgb(37, 37, 41);
+  border-radius: 30px;
+  margin-left:4rem;
+  color: white;
+}
+
+.caja31 .caja_texto p{
+  display: none;
+}
+.caja31:hover .caja_texto p{
+  display: block;
+text-align: center;
+font-size: 2rem;
+margin-top: 9rem;
+margin-left: 11%;
+width: 26rem;
+height: 6rem;
+}
+  
+
+/*-------------------------------------------------------*/
+.caja32{
+  grid-column: 2/3;
+  grid-row: 8/9;
+  background: #4262f0;
+  background-image: url(../img/corona-dental.jpg);
+  background-size: cover;
+  border-radius: 1rem;
+  color: white;
+  height: 15rem;
+  text-shadow: 1px 1px 2px rgb(243, 165, 165), 0 0 1em rgb(37, 37, 41), 0 0 0.2em rgb(37, 37, 41);
+  transition: all 1.5s;
+  cursor: pointer;
+}
+.caja32 .caja_titulo h3{
+ position: relative;
+ top:4rem;
+ font-size: 3rem;
+}
+.caja32:hover .caja_titulo h3{
+  position: relative;
+  top:-2rem;
+
+}
+.caja32:hover{
+  transform: scale3d(1.5, 1.5, 1);
+  z-index: 1000;
+  background: linear-gradient(0.45turn, #d887f1cb, #b167bbcb, #f63cb8cb);
+  text-shadow: 1px 1px 2px rgb(243, 165, 165), 0 0 1em rgb(37, 37, 41), 0 0 0.2em rgb(37, 37, 41);
+  border-radius:3rem;
+  color: white;
+}
+
+.caja32 .caja_texto p{
+  display: none;
+}
+.caja32:hover .caja_texto p{
+  display: block;
+text-align: center;
+font-size: 1.5rem;
+margin-top: -4rem;
+margin-left: 15%;
+width: 26rem;
+height: 6rem;
+}
+/*-------------------------------------------------------*/
+.caja33{
+  grid-column: 3/4;
+  grid-row: 8/9;
+  background: #4262f0;
+  background-image: url(../img/puente_dental.jpg);
+  background-size: cover;
+  border-radius: 1rem;
+  color: white;
+  height: 15rem;
+  text-shadow: 1px 1px 2px rgb(243, 165, 165), 0 0 1em rgb(37, 37, 41), 0 0 0.2em rgb(37, 37, 41);
+  transition: all 1.5s;
+  cursor: pointer;
+}
+.caja33 .caja_titulo h3{
+ position: relative;
+ top:4rem;
+ font-size: 3rem;
+}
+.caja33:hover .caja_titulo h3{
+  position: relative;
+  top:-2rem;
+
+}
+.caja33:hover{
+  transform: scale3d(1.5, 1.5, 1);
+  z-index: 1000;
+  background: linear-gradient(0.45turn, #d887f1cb, #b167bbcb, #f63cb8cb);
+  text-shadow: 1px 1px 2px rgb(243, 165, 165), 0 0 1em rgb(37, 37, 41), 0 0 0.2em rgb(37, 37, 41);
+  border-radius: 3rem;
+  color: white;
+}
+
+.caja33 .caja_texto p{
+  display: none;
+}
+.caja33:hover .caja_texto p{
+  display: block;
+text-align: center;
+font-size: 1.5rem;
+margin-top: -4rem;
+margin-left: 15%;
+width: 26rem;
+height: 6rem;
+}
+/*-------------------------------------------------------*/
+.caja34{
+  grid-column: 4/5;
+  grid-row: 8/10;
+  background-image: url(../img/ortodocia.jpg);
+  background-size: cover;
+  border-radius: 1rem;
+  color: white;
+  height: 100%;
+  text-shadow: 1px 1px 2px rgb(243, 165, 165), 0 0 1em rgb(37, 37, 41), 0 0 0.2em rgb(37, 37, 41);
+  transition: all 1.5s;
+  cursor: pointer;
+}
+.caja34 .caja_titulo h3{
+  position: relative;
+  top:10rem;
+  font-size: 3rem;
+ }
+ .caja34:hover .caja_titulo h3{
+   position: relative;
+   top:2.5rem;
+ 
+ }
+ .caja34:hover{
+  transform: scale3d(1.3, 1.3, 1);
+  z-index: 1002;
+  background: linear-gradient(0.45turn, #d887f1cb, #b167bbcb, #f63cb8cb);
+  text-shadow: 1px 1px 2px rgb(243, 165, 165), 0 0 1em rgb(37, 37, 41), 0 0 0.2em rgb(37, 37, 41);
+  border-radius: 3rem;
+  margin-right:4rem;
+  margin-top: -15rem;;
+  color: white;
+}
+
+.caja34 .caja_texto p{
+  display: none;
+}
+.caja34:hover .caja_texto p{
+  display: block;
+text-align: center;
+font-size: 2rem;
+margin-top: 4.5rem;
+margin-left: 12%;
+width: 26rem;
+height: 6rem;
+}
+
+/*-------------------------------------------------------*/
+.caja35{
+  grid-column: 1/2;
+  grid-row: 9/10;
+  background: #4262f0;
+  background-image: url(../img/blanqueamiento.jpg);
+  background-size: cover;
+  border-radius: 1rem;
+  color: white;
+  height: 15rem;
+  text-shadow: 1px 1px 2px rgb(243, 165, 165), 0 0 1em rgb(37, 37, 41), 0 0 0.2em rgb(37, 37, 41);
+  transition: all 1.5s;
+  cursor: pointer;
+}
+.caja35 .caja_titulo h3{
+ position: relative;
+ top:4rem;
+ font-size: 3rem;
+}
+.caja35:hover .caja_titulo h3{
+  position: relative;
+  top:-1.5rem;
+
+}
+.caja35:hover{
+  transform: scale3d(1.3, 1.8, 1);
+  z-index: 1000;
+  background: linear-gradient(0.45turn, #d887f1cb, #b167bbcb, #f63cb8cb);
+  text-shadow: 1px 1px 2px rgb(243, 165, 165), 0 0 1em rgb(37, 37, 41), 0 0 0.2em rgb(37, 37, 41);
+  border-radius: 3rem;
+  margin-left:5rem;;
+  margin-top: -15rem;
+  color: white;
+}
+
+.caja35 .caja_texto p{
+  display: none;
+}
+.caja35:hover .caja_texto p{
+  display: block;
+text-align: center;
+font-size: 1.4rem;
+margin-top: -4.5rem;
+margin-left: 10%;
+width: 26rem;
+height: 6rem;
+}
+/*-------------------------------------------------------*/
+.caja36{
+  grid-column: 2/3;
+  grid-row: 9/10;
+  background: #4262f0;
+  background-image: url(../img/endodoncia.jpg);
+  background-size: cover;
+  border-radius: 1rem;
+  color: white;
+  height: 15rem;
+  text-shadow: 1px 1px 2px rgb(243, 165, 165), 0 0 1em rgb(37, 37, 41), 0 0 0.2em rgb(37, 37, 41);
+  transition: all 1.5s;
+  cursor: pointer;
+}
+.caja36 .caja_titulo h3{
+ position: relative;
+ top:4rem;
+ font-size: 3rem;
+}
+.caja36:hover .caja_titulo h3{
+  position: relative;
+  top:-1.5rem;
+
+}
+.caja36:hover{
+  transform: scale3d(1.5, 1.8, 1);
+  z-index: 1000;
+  background: linear-gradient(0.45turn, #d887f1cb, #b167bbcb, #f63cb8cb);
+  text-shadow: 1px 1px 2px rgb(243, 165, 165), 0 0 1em rgb(37, 37, 41), 0 0 0.2em rgb(37, 37, 41);
+  border-radius:3rem;
+  margin-top: -15rem;
+  color: white;
+}
+
+.caja36 .caja_texto p{
+  display: none;
+}
+.caja36:hover .caja_texto p{
+  display: block;
+text-align: center;
+font-size: 1.3rem;
+margin-top:-5rem;
+margin-left: 15%;
+width: 26rem;
+height: 6rem;
+}
+/*-------------------------------------------------------*/
+.caja37{
+  grid-column: 3/4;
+  grid-row: 9/10;
+  background: #4262f0;
+  background-image: url(../img/terceros_molares.jpg);
+  background-size: cover;
+  border-radius: 1rem;
+  color: white;
+  height: 16rem;
+  text-shadow: 1px 1px 2px rgb(243, 165, 165), 0 0 1em rgb(37, 37, 41), 0 0 0.2em rgb(37, 37, 41);
+  transition: all 1.5s;
+  cursor: pointer;
+}
+.caja37 .caja_titulo h3{
+ position: relative;
+ top:4rem;
+ font-size: 3rem;
+}
+.caja37:hover .caja_titulo h3{
+  position: relative;
+  top:-2rem;
+
+}
+.caja37:hover{
+  transform: scale3d(1.5, 1.8, 1);
+  z-index: 1000;
+  background: linear-gradient(0.45turn, #d887f1cb, #b167bbcb, #f63cb8cb);
+  text-shadow: 1px 1px 2px rgb(243, 165, 165), 0 0 1em rgb(37, 37, 41), 0 0 0.2em rgb(37, 37, 41);
+  border-radius: 3rem;
+  margin-top: -15rem;
+  color: white;
+}
+
+.caja37 .caja_texto p{
+  display: none;
+}
+.caja37:hover .caja_texto p{
+  display: block;
+text-align: center;
+font-size: 1.5rem;
+margin-top:-5.5rem;
+margin-left: 16%;
+width: 26rem;
+height: 6rem;
+}
+/*-------------------------------------------------------*/
+
+/*----------------------------------------BTON Flotante------------------------------*/
+#btn-mas{
+  display: none; 
+}
+.cont_boton{
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+
+}
+
+.redes a, .btn-mas label{
+  display: block;
+  text-decoration: none;
+  background: #dd1d93;
+  color: #fff;
+  width: 5.5rem;
+  height: 5.5rem;
+  line-height: 5.5rem;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
+  transition: all 500ms ease;
+}
+.redes a .fa-whatsapp{
+  display: block;
+  text-decoration: none;
+  background: #1ddd4db4;
+  color: #fff;
+  width: 5.5rem;
+  height: 5.5rem;
+  line-height:5.5rem;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
+  transition: all 500ms ease;
+}
+.redes a .fa-phone{
+  display: block;
+  text-decoration: none;
+  background: #1d2addaf;
+  color: #fff;
+  width: 5.5rem;
+  height: 5.5rem;
+  line-height: 5.5rem;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
+  transition: all 500ms ease;
+}
+.redes a .fa-location-dot{
+  display: block;
+  text-decoration: none;
+  background: #dd831db9;
+  color: #fff;
+  width: 5.5rem;
+  height: 5.5rem;
+  line-height: 5.5rem;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
+  transition: all 500ms ease;
+}
+
+.redes a{
+  margin-bottom: -1.5rem;
+  opacity: 0;
+  visibility: hidden;
+}
+#btn-mas:checked~ .redes a{
+  margin-bottom: 1rem;
+  opacity: 1;
+  visibility: visible;
+}
+.btn-mas label{
+  cursor: pointer;
+  background: #f337dab6;
+  font-size: 2.3rem;
+  animation:sombra;
+  animation-play-state: running;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes sombra{
+	0% {
+		box-shadow: 1px 1px 2px 8px rgba(235, 235, 240, 0.349),  -1px -1px 2px 8px rgba(235, 235, 240, 0.349);
+	  }
+	50% {
+		box-shadow: 1.5px 1.5px 2px 8px rgba(187, 236, 9, 0.349),  -1.5px -1.5px 2px 8px rgba(187, 236, 9, 0.349);
+	  }
+    100%{
+      box-shadow: 1px 1px 2px 8px rgba(235, 235, 240, 0.349),  -1px -1px 2px 8px rgba(235, 235, 240, 0.349);
+    }
+}
+#btn-mas:checked ~ .btn-mas label{
+  transform: rotate(135deg);
+  font-size: 2.5rem;
+}
+.ctn_phone {
+  position: relative;
+}
+
+
+
+/*
+.phone2 {
+  position: absolute;
+  background-color: rgb(184, 20, 224);
+  font-size: 3rem;
+  padding: 3rem;
+  margin-bottom: 3rem;
+  border: 3px solid violet;
+  box-shadow: 5px 5px 10px var(--fondo1), -5px -5px 10px var(--fondo1);
+  border-radius: 2rem;
+  transform: translate(-240px, -65px);
+  opacity: 0;
+  width: 27.5rem;
+  height: 5rem;
+  pointer-events: none;
+  z-index: 1001;
+}
+.phone2 p{
+  margin-top: -15px;
+  margin-left: 2rem;
+}
+.ctn_phone:hover .phone2 {
+  opacity: 1;
+  pointer-events: initial;
+  color: aliceblue;
+}  */
+
+.ctn_phone input{  
+  position: absolute;  
+  width: 100%;  
+  height: 100%;  
+  appearance: none;  
+  -webkit-appearance: none;  
+  cursor: pointer;  
+}  
+ 
+.ctn_phone input:checked::before{  
+  content: "";  
+  font-size: 2rem;   
+}  
+.ctn_phone input::after{  
+  content: "";  
+  position: absolute; 
+  z-index: -10;   
+  border-radius: 0%;  
+  transform: scale(.5);  
+  transition: all .4s;
+  opacity: 0;
+}  
+.ctn_phone input:checked::after{  
+  transform: scale(1.5);  
+  border-radius: 50%;  
+}  
+.phone2{  
+  position: absolute;
+  background-color: rgb(184, 20, 224);
+  border: 1px solid white;
+  border-radius: 3rem;
+  color: wheat;
+  padding: 1rem;
+  width: 22rem;
+  height: 5rem;
+  font-size: 2rem;
+  opacity: 0;
+  transform: translate(120px, 90%);
+  z-index: -10;  
+}  
+.phone2 p{
+  margin-top: 2px;
+  margin-left: 4rem;
+}
+.ctn_phone input:checked ~ .phone2{  
+  transition: all 1s;  
+  transform: translate(-180px, -130%);
+  z-index: 50;  
+  opacity: 1;
+}  
+
+/*-----------------------------------RESPONSIVE------------------------------------*/
+/*-----------------------------------RESPONSIVE------------------------------------*/
+@media(max-width:1200px){
+  body {
+    font-size: 13px; /* -----------Estas dos etiquetas body y HTML se utilizan para sacarle
+    mejor provecho al rem en los font-size----*/
+    overflow:scroll;
+  }
+}
+/*-----------------------------------------------------*/
+/*-----------------------------------------------------*/
+@media (min-width:993px) and (max-width:1199px){
+  html {
+    font-size: 50.5%;
+    box-sizing: border-box;
+  }
+  body {
+    font-size: 13px; /* -----------Estas dos etiquetas body y HTML se utilizan para sacarle
+    mejor provecho al rem en los font-size----*/
+    overflow:scroll;
+    background-size: auto;
+  }
+}
+
+/*-----------------------------------------------------*/
+/*-----------------------------------------------------*/
+@media (max-width:992px){
+
+  html {
+    font-size: 50.5%;
+    box-sizing: border-box;
+  }
+  body {
+    font-size: 13px; /* -----------Estas dos etiquetas body y HTML se utilizan para sacarle
+    mejor provecho al rem en los font-size----*/
+    overflow:scroll;
+    background-size: auto;
+  }
+  main{
+  padding: 5rem;
+  }
+  .main{
+    width: 142rem;
+    height: 138rem;
+ 
+  }
+  .cont_boton{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+  }
+  .caja21:hover .caja_texto p{
+    margin-left: 14%;
+    }
+    .caja22:hover .caja_texto p{
+    margin-left: 10%;
+    }
+    .caja23:hover .caja_texto p{
+    margin-left: 8%;
+    }
+    .caja24:hover .caja_texto p{
+    margin-left: 0%;
+    }
+    
+    .caja31:hover .caja_texto p{
+    margin-left: 7%;
+    }
+    
+    .caja32:hover .caja_texto p{
+    margin-left: 12%;
+    }
+    
+    .caja33:hover .caja_texto p{
+    margin-left: 11%;
+    }
+    
+    .caja34:hover .caja_texto p{
+    margin-left: 7%;
+    }
+    
+    .caja35:hover .caja_texto p{
+    margin-left: 5%;
+    }
+    
+    .caja36:hover .caja_texto p{
+    margin-left: 11%;
+    }
+    
+    .caja37:hover .caja_texto p{
+    margin-left: 11%;
+    
+    }
+
+  }
+
+  /*-----------------------------------------------------*/
+  /*-----------------------------------------------------*/
+  @media (min-width:831px) and (max-width:975px){
+    html {
+      font-size: 45.5%;
+      box-sizing: border-box;
+    }
+    body {
+      font-size: 12px; /* -----------Estas dos etiquetas body y HTML se utilizan para sacarle
+      mejor provecho al rem en los font-size----*/
+      overflow:scroll;
+      background-size: auto;
+    }
+    .main{
+      width: auto;
+      height: 138rem;
+   
+    }
+
+    .caja21:hover .caja_texto p{
+      margin-left: 12%;
+      }
+      .caja22:hover .caja_texto p{
+      margin-left: 8%;
+      }
+      .caja23:hover .caja_texto p{
+      margin-left: 4%;
+      }      
+      .caja31:hover .caja_texto p{
+      margin-left: 4%;
+      }
+      
+      .caja32:hover .caja_texto p{
+      margin-left: 8%;
+      }
+      
+      .caja33:hover .caja_texto p{
+      margin-left: 8%;
+      }
+      
+      .caja34:hover .caja_texto p{
+      margin-left: 3%;
+      }
+      
+      .caja35:hover .caja_texto p{
+      margin-left: 0%;
+      }
+      
+      .caja36:hover .caja_texto p{
+      margin-left: 7%;
+      }
+      
+      .caja37:hover .caja_texto p{
+      margin-left: 7%;
+      
+      }
+  }
+/*-----------------------------------------------------*/
+/*-----------------------------------------------------*/
+
+  @media (min-width:769px) and (max-width:830px){
+    html {
+      font-size: 40.5%;
+      box-sizing: border-box;
+    }
+    body {
+      font-size: 13px; /* -----------Estas dos etiquetas body y HTML se utilizan para sacarle
+      mejor provecho al rem en los font-size----*/
+      overflow:auto;
+    }
+  }
+/*-----------------------------------------------------*/
+/*-----------------------------------------------------*/
+@media(max-width:768px){
+  html {
+    font-size: 40.5%;
+    box-sizing: border-box;
+  }
+  body {
+    font-size: 13px; /* -----------Estas dos etiquetas body y HTML se utilizan para sacarle
+    mejor provecho al rem en los font-size----*/
+    overflow:auto;
+  }
+  .main{
+    width: 138rem;
+    height: 165rem;
+ 
+  }
+  .cajass:hover .caja_texto p{
+    margin-left: 5%;
+  }
+  .form_cierre{
+    top: -1.2rem;
+    left: 93%;
+ 
+  }
+  .caja24:hover .caja_texto p{
+    margin-left: -1%;
+    }
+  .caja35:hover .caja_texto p{
+    margin-left: 1%;
+    }
+}
+
+/*-----------------------------------------------------*/
+/*-----------------------------------------------------*/
+@media (min-width:630px) and (max-width:749px){
+
+  html {
+    font-size: 38.5%;
+    box-sizing: border-box;
+  }
+  body {
+    font-size: 8px; /* -----------Estas dos etiquetas body y HTML se utilizan para sacarle
+    mejor provecho al rem en los font-size----*/
+  }
+  .main{
+    width: auto;
+    height: auto;
+ 
+  }
+  .caja23:hover .caja_texto p{
+    margin-left: 2%;
+    }
+    .caja31:hover .caja_texto p{
+      margin-left: 0%;
+      }
+      .caja34:hover .caja_texto p{
+        margin-left: 0%;
+        }
+}
+
+/*-----------------------------------------------------*/
+/*-----------------------------------------------------*/
+@media (min-width:545px) and (max-width:629px){
+  .main{
+    width: auto;
+    height: auto;
+  }
+
+  
+  .caja21:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-left: 1%;
+  }
+
+  .caja22:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-left: 1%;
+  }
+
+
+  .caja23:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+
+  margin-left: 1%;
+  }
+
+  .caja24:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-left: 1%;
+  }
+
+  .caja31:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-left: 1%;
+  }
+
+  .caja32:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-left: 1%;
+  }
+
+  .caja33:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-left: 1%;
+  }
+
+  .caja34:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-left: 1%;
+  }
+
+  .caja35:hover .caja_texto p{
+    display: block;
+  font-size: 1rem;
+  margin-left: 1%;
+  }
+
+  .caja36:hover .caja_texto p{
+    display: block;
+  font-size: 1rem;
+  margin-top: 5rem;
+  margin-left: 1%;
+  }
+
+
+  .caja37:hover .caja_texto p{
+    display: block;
+  font-size: 1rem;
+  margin-top: -10rem;
+  margin-left: 1%;
+  }
+
+
+
+  .formulario {
+    display:block;
+    align-items: center;
+  }
+  .form_cierre{
+    top: -12rem;
+    left: 93%;
+  }
+}
+/*-----------------------------------------------------*/
+/*-----------------------------------------------------*/
+@media (max-width:544px){
+  html {
+    font-size: 40.5%;
+    box-sizing: border-box;
+  }
+  body {
+    font-size: 10px; /* -----------Estas dos etiquetas body y HTML se utilizan para sacarle
+    mejor provecho al rem en los font-size----*/
+  }
+  .main{
+    width: auto;
+    height: auto;
+ 
+  }
+
+  .cajass:hover .caja_titulo h3{
+    font-size: 2.5rem;
+  }
+
+  .cajass:hover .caja_texto p{
+    margin-left: 0%;
+    font-size: 1.2rem;
+  }
+ .caja1:hover .caja_texto p{
+    font-size: 2rem;
+  }
+  .caja2:hover .caja_texto p{
+    font-size: 2rem;
+  }
+  .caja3:hover .caja_texto p{
+    font-size: 2rem;
+  }
+  .caja23:hover{
+    transform: scale3d(1.1, 1.1, 1.1);
+    margin-right:1rem;
+  }
+  .caja31:hover{
+    transform: scale3d(1.1, 1.1, 1.1);
+    margin-left:1rem;
+  }
+  .caja34:hover{
+    transform: scale3d(1.1, 1.1, 1.1);
+    margin-right:1rem;
+    margin-top: -1rem;
+  }
+  .caja35:hover{
+    transform: scale3d(1.1, 1.1, 1.1);
+    margin-left:1rem;
+    margin-top: -1rem;
+  }
+
+}
+
+/*-----------------------------------------------------*/
+/*-----------------------------------------------------*/
+@media(max-width:480px){
+  html {
+    font-size: 40.5%;
+    box-sizing: border-box;
+  }
+  body {
+    font-size: 10px; /* -----------Estas dos etiquetas body y HTML se utilizan para sacarle
+    mejor provecho al rem en los font-size----*/
+
+  }
+  main{
+    width: auto;
+    height: auto;
+    }
+
+  .main{
+    display: grid;
+    grid-template-columns:50% 50%;
+    width: auto;
+    height: auto;
+  }
+
+  .caja0{
+    grid-column: 1 / 3;
+  }
+  .caja1{
+    grid-column: 1/3;
+    grid-row: 2/4;
+  }
+
+  .caja2{
+    grid-column: 1/3;
+    grid-row: 4/6;
+  }
+
+
+  .caja21{
+    grid-column: 1/2;
+    grid-row: 6/7;
+
+  }
+  .caja21:hover{
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  .caja21 .caja_titulo h3{
+    top:1rem;
+   }
+  .caja21:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-top: -1rem;
+  margin-left: 19%;
+  }
+
+
+  .caja22{
+    grid-column: 2/3;
+    grid-row: 6/7;
+  }
+  .caja22:hover{
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  .caja22:hover .caja_titulo h3{
+    position: relative;
+    top:1rem;
+  }
+  .caja22 .caja_titulo h3{
+    top:1rem;
+   }
+  .caja22:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-top: -1rem;
+  margin-left: 19%;
+  }
+
+
+  .caja23{
+    grid-column: 1/2;
+    grid-row: 7/8;
+    height: 15.5rem;
+  }
+  .caja23:hover{
+    transform: scale3d(1.1, 1.1, 1.1);
+    z-index: 1000;
+    margin-right:0;
+  }
+  .caja23 .caja_titulo h3{
+    top:1rem;
+   }
+  .caja23:hover .caja_titulo h3{
+    position: relative;
+    top:1rem;
+  }
+  .caja23:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-top: -1rem;
+  margin-left: 19%;
+  }
+
+
+  .caja24{
+    grid-column: 2/3;
+    grid-row: 7/8;
+    height: 15.5rem;
+  }
+  .caja24:hover{
+    transform: scale3d(1.1, 1.1, 1.1);
+    z-index: 1000;
+    padding-bottom: 3rem;
+    margin-left:0;
+    margin-top: 0;
+  }
+  .caja24 .caja_titulo h3{
+    top:1rem;
+    font-size: 3rem;
+   }
+   .caja24:hover .caja_titulo h3{
+    position: relative;
+    top:-1rem;
+  }
+  .caja24:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-top: -4rem;
+  margin-left: 19%;
+  width: 26rem;
+  height: 6rem;
+  }
+
+
+  .caja3{
+    grid-column: 1/3;
+    grid-row: 8/9;
+  }
+
+
+  .caja31{
+    grid-column: 1/2;
+    grid-row: 9/10;
+  }
+  .caja31:hover{
+    transform: scale3d(1.1, 1.1, 1.1);
+    margin-left: 0;
+  }
+  .caja31 .caja_titulo h3{
+    top:1rem;
+   }
+  .caja31:hover .caja_titulo h3{
+    position: relative;
+    top:-1rem;
+  }
+  .caja31:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-top: -3rem;
+  margin-left: 19%;
+  }
+
+
+  .caja32{
+    grid-column: 2/3;
+    grid-row: 9/10;
+  }
+  .caja32:hover{
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  .caja32 .caja_titulo h3{
+    top:1rem;
+   }
+  .caja32:hover .caja_titulo h3{
+    position: relative;
+    top:-1rem;
+  }
+  .caja32:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-top: -3rem;
+  margin-left: 19%;
+  }
+
+
+  .caja33{
+    grid-column: 1/2;
+    grid-row: 10/11;
+  }
+  .caja33:hover{
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  .caja33 .caja_titulo h3{
+    top:1rem;
+   }
+  .caja33:hover .caja_titulo h3{
+    position: relative;
+    top:-1rem;
+  }
+  .caja33:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-top: -3rem;
+  margin-left: 19%;
+  }
+
+
+  .caja34{
+    grid-column: 2/3;
+    grid-row: 10/11;
+  }
+  .caja34:hover{
+    transform: scale3d(1.1, 1.1, 1.1);
+    margin-right:0;
+    margin-top: 0;
+  }
+  .caja34 .caja_titulo h3{
+    top:1rem;
+   }
+  .caja34:hover .caja_titulo h3{
+    position: relative;
+    top:-1rem;
+  }
+  .caja34:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-top: -3rem;
+  margin-left: 19%;
+  }
+
+
+  .caja35{
+    grid-column: 1/2;
+    grid-row: 11/12;
+  }
+  .caja35:hover{
+    transform: scale3d(1.1, 1.1, 1.1);
+    margin-left:0;
+    margin-top: 0;
+  }
+  .caja35 .caja_titulo h3{
+    top:1rem;
+   }
+  .caja35:hover .caja_titulo h3{
+    position: relative;
+    top:-1rem;
+  }
+  .caja35:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-top: -3.5rem;
+  margin-left: 19%;
+  }
+
+
+  .caja36{
+    grid-column: 2/3;
+    grid-row: 11/12;
+  }
+  .caja36:hover{
+    transform: scale3d(1.1, 1.1, 1.1);
+    margin-top: 0;
+  }
+  .caja36 .caja_titulo h3{
+    top:1rem;
+   }
+  .caja36:hover .caja_titulo h3{
+    position: relative;
+    top:-2.5rem;
+  }
+  .caja36:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-top: -5.5rem;
+  margin-left: 19%;
+  }
+
+
+  .caja37{
+    grid-column: 1/2;
+    grid-row: 12/13;
+  }
+  .caja37:hover{
+    transform: scale3d(1.1, 1.1, 1.1);
+    margin-top: 0;
+  }
+  .caja37 .caja_titulo h3{
+    top:1rem;
+   }
+  .caja37:hover .caja_titulo h3{
+    position: relative;
+    top:-1rem;
+  }
+  .caja37:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-top: -4rem;
+  margin-left: 19%;
+  }
+
+  .formulario {
+    display:block;
+    align-items: center;
+  }
+  .form_cierre{
+    top: -12rem;
+    left: 93%;
+  }
+
+
+}
+
+/*-----------------------------------------------------*/
+/*-----------------------------------------------------*/
+@media (min-width:377px) and (max-width:455px){
+
+  html {
+    font-size: 35.5%;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-size: 8px; /* -----------Estas dos etiquetas body y HTML se utilizan para sacarle
+    mejor provecho al rem en los font-size----*/
+    height: auto;
+    background: repeating-linear-gradient(to top left,
+    Indigo, Indigo 10px, RebeccaPurple 10px, RebeccaPurple 15px) !important;
+  }
+
+  .caja21:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-left: 15%;
+  }
+
+  .caja22:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-left: 15%;
+  }
+
+
+  .caja23:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-left: 15%;
+  }
+
+  .caja24:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-left: 15%;
+  }
+
+  .caja31:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-left: 15%;
+  }
+
+  .caja32:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-left: 15%;
+  }
+
+  .caja33:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-left: 15%;
+  }
+
+  .caja34:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-left: 15%;
+  }
+
+  .caja35:hover .caja_texto p{
+    display: block;
+    margin-top: -2rem;
+  font-size: 1rem;
+  margin-left: 15%;
+  }
+
+  .caja36:hover .caja_texto p{
+    display: block;
+    margin-top: -2rem;
+  font-size: 1rem;
+  margin-left: 15%;
+  }
+
+
+  .caja37:hover .caja_texto p{
+    display: block;
+    margin-top: -2rem;
+  font-size: 1rem;
+  margin-left: 15%;
+  }
+  .form_cierre{
+    top: -8.5rem;
+    left: 97%;
+  }
+
+}
+/*-----------------------------------------------------*/
+/*-----------------------------------------------------*/
+@media (min-width:351px) and (max-width:376px){
+
+  .caja21:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-left: 0%;
+  }
+
+  .caja22:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-left: 0%;
+  }
+
+
+  .caja23:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-left: 0%;
+  }
+
+  .caja24:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-left: 0%;
+  }
+
+  .caja31:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-left: 0%;
+  }
+
+  .caja32:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-left: 0%;
+  }
+
+  .caja33:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-left: 0%;
+  }
+
+  .caja34:hover .caja_texto p{
+    display: block;
+  font-size: 1.5rem;
+  margin-left: 0%;
+  }
+
+  .caja35:hover .caja_texto p{
+    display: block;
+    margin-top: -2rem;
+  font-size: 1rem;
+  margin-left: 0%;
+  }
+
+  .caja36:hover .caja_texto p{
+    display: block;
+    margin-top: -2rem;
+  font-size: 1rem;
+  margin-left: 0%;
+  }
+
+
+  .caja37:hover .caja_texto p{
+    display: block;
+    margin-top: -2rem;
+  font-size: 1rem;
+  margin-left: 0%;
+  }
+  .form_cierre{
+    top: -10rem;
+    left: 97%;
+  }
+
+}
+
+/*-----------------------------------------------------*/
+/*-----------------------------------------------------*/
+@media(max-width:350px){
+  body {
+    font-size: 10px; /* -----------Estas dos etiquetas body y HTML se utilizan para sacarle
+    mejor provecho al rem en los font-size----*/
+    height: auto;
+    background: repeating-linear-gradient(to top left,
+    Indigo, Indigo 10px, RebeccaPurple 10px, RebeccaPurple 15px) !important;
+  }
+  main{
+    padding: 2rem;
+    }
+
+    .cabecera {
+      /* background-color: rgba(167, 79, 226, 0.7) !important;*/
+       display: flex;
+       justify-content: space-evenly;
+      /* box-shadow: 5px 5px 10px var(--fondo1), -5px -5px 10px var(--fondo1);*/
+     }
+     .logo{
+       padding-right:8rem ;
+     }
+
+  .main{
+    display: grid;
+    grid-template-columns:100%;
+    width: auto;
+    height: auto;
+  }
+
+  .caja0{
+    grid-column: 1 / 2;
+    grid-row: 1/2;
+  }
+  .caja1{
+    grid-column: 1/2;
+    grid-row: 2/4;
+  }
+
+  .caja2{
+    grid-column: 1/2;
+    grid-row: 4/6;
+  }
+
+
+  .caja21{
+    grid-column: 1/2;
+    grid-row: 6/7;
+  }
+  .caja21:hover .caja_texto p{
+  margin-top: -1rem;
+  margin-left: 25%;
+  }
+
+  .caja22{
+    grid-column: 1/2;
+    grid-row: 7/8;
+    height: 15.5rem;
+  }
+  .caja22:hover .caja_texto p{
+    margin-top: -1rem;
+    margin-left: 25%;
+    }
+
+  .caja23{
+    grid-column: 1/2;
+    grid-row: 8/9;
+    height: 15.5rem;
+  }
+  .caja23:hover .caja_texto p{
+    margin-top: -1rem;
+    margin-left: 25%;
+    }
+
+
+  .caja24{
+    grid-column: 1/2;
+    grid-row: 9/10;
+    height: 15.5rem;
+  }
+  .caja24:hover .caja_texto p{
+    margin-top: -3rem;
+    margin-left: 25%;
+    }
+ 
+  .caja3{
+    grid-column: 1/2;
+    grid-row: 10/12;
+  }
+
+
+  .caja31{
+    grid-column: 1/2;
+    grid-row: 12/13;
+    height: 15.5rem;
+  }
+  .caja31:hover .caja_texto p{
+    margin-top: -3rem;
+    margin-left: 25%;
+    }
+
+  .caja32{
+    grid-column: 1/2;
+    grid-row: 13/14;
+  }
+  .caja32:hover .caja_texto p{
+    margin-top: -3rem;
+    margin-left: 25%;
+    }
+
+  .caja33{
+    grid-column: 1/2;
+    grid-row: 14/15;
+  }
+  .caja33:hover .caja_texto p{
+    margin-top: -3rem;
+    margin-left: 25%;
+    }
+
+  .caja34{
+    grid-column: 1/2;
+    grid-row: 15/16;
+    height: 15.5rem;
+  }
+  .caja34:hover .caja_texto p{
+    margin-top: -3rem;
+    margin-left: 25%;
+    }
+
+  .caja35{
+    grid-column: 1/2;
+    grid-row: 16/17;
+  }
+  .caja35:hover .caja_texto p{
+    margin-top: -3.5rem;
+    margin-left: 25%;
+    }
+
+  .caja36{
+    grid-column: 1/2;
+    grid-row: 17/18;
+  }
+  .caja36:hover .caja_texto p{
+    margin-top: -5rem;
+    margin-left: 25%;
+    }
+  .caja37{
+    grid-column: 1/2;
+    grid-row: 18/19;
+  }
+  .caja37:hover .caja_texto p{
+    margin-top: -4rem;
+    margin-left: 25%;
+    }
+
+    .form_cierre{
+      top: -12rem;
+      left: 97%;
+    }
+}
+
+/*-----------------------------------------------------*/
+/*-----------------------------------------------------*/
+@media(max-width:320px){
+  body {
+    font-size: 10px; /* -----------Estas dos etiquetas body y HTML se utilizan para sacarle
+    mejor provecho al rem en los font-size----*/
+    height: auto;
+    background: repeating-linear-gradient(to top left,
+    Indigo, Indigo 10px, RebeccaPurple 10px, RebeccaPurple 15px) !important;
+  }
+  main{
+    padding: 2rem;
+    }
+
+    .cabecera {
+      /* background-color: rgba(167, 79, 226, 0.7) !important;*/
+       display: flex;
+       justify-content: space-evenly;
+      /* box-shadow: 5px 5px 10px var(--fondo1), -5px -5px 10px var(--fondo1);*/
+     }
+     .logo{
+       padding-right:8rem ;
+     }
+
+  .main{
+    display: grid;
+    grid-template-columns:100%;
+    width: auto;
+    height: auto;
+  }
+
+  .caja0{
+    grid-column: 1 / 2;
+    grid-row: 1/2;
+  }
+  .caja1{
+    grid-column: 1/2;
+    grid-row: 2/4;
+  }
+
+  .caja2{
+    grid-column: 1/2;
+    grid-row: 4/6;
+  }
+
+
+  .caja21{
+    grid-column: 1/2;
+    grid-row: 6/7;
+  }
+  .caja21:hover .caja_texto p{
+  margin-top: -1rem;
+  margin-left: 25%;
+  }
+
+  .caja22{
+    grid-column: 1/2;
+    grid-row: 7/8;
+    height: 15.5rem;
+  }
+  .caja22:hover .caja_texto p{
+    margin-top: -1rem;
+    margin-left: 25%;
+    }
+
+  .caja23{
+    grid-column: 1/2;
+    grid-row: 8/9;
+    height: 15.5rem;
+  }
+  .caja23:hover .caja_texto p{
+    margin-top: -1rem;
+    margin-left: 25%;
+    }
+
+
+  .caja24{
+    grid-column: 1/2;
+    grid-row: 9/10;
+    height: 15.5rem;
+  }
+  .caja24:hover .caja_texto p{
+    margin-top: -3rem;
+    margin-left: 25%;
+    }
+ 
+  .caja3{
+    grid-column: 1/2;
+    grid-row: 10/12;
+  }
+
+
+  .caja31{
+    grid-column: 1/2;
+    grid-row: 12/13;
+    height: 15.5rem;
+  }
+  .caja31:hover .caja_texto p{
+    margin-top: -3rem;
+    margin-left: 25%;
+    }
+
+  .caja32{
+    grid-column: 1/2;
+    grid-row: 13/14;
+  }
+  .caja32:hover .caja_texto p{
+    margin-top: -3rem;
+    margin-left: 25%;
+    }
+
+  .caja33{
+    grid-column: 1/2;
+    grid-row: 14/15;
+  }
+  .caja33:hover .caja_texto p{
+    margin-top: -3rem;
+    margin-left: 25%;
+    }
+
+  .caja34{
+    grid-column: 1/2;
+    grid-row: 15/16;
+    height: 15.5rem;
+  }
+  .caja34:hover .caja_texto p{
+    margin-top: -3rem;
+    margin-left: 25%;
+    }
+
+  .caja35{
+    grid-column: 1/2;
+    grid-row: 16/17;
+  }
+  .caja35:hover .caja_texto p{
+    margin-top: -3.5rem;
+    margin-left: 25%;
+    }
+
+  .caja36{
+    grid-column: 1/2;
+    grid-row: 17/18;
+  }
+  .caja36:hover .caja_texto p{
+    margin-top: -5rem;
+    margin-left: 25%;
+    }
+  .caja37{
+    grid-column: 1/2;
+    grid-row: 18/19;
+  }
+  .caja37:hover .caja_texto p{
+    margin-top: -4rem;
+    margin-left: 25%;
+    }
+
+    .form_cierre{
+      top: -14rem;
+      left: 97%;
+    }
+}
+
